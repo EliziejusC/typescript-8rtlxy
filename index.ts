@@ -23,11 +23,21 @@ export class SevenSegmentDisplay {
     return splitArray;
   }
 
+  colorPiker(numberString: string) {
+    if()
+    console.log(this.Asegment[0]);
+  }
+
   save(): void {
-    
+    console.log(this.Asegment[0]);
     const numberValue = this.arraySplit();  
-    console.log(numberValue[0])
+    console.log(numberValue)
+   
     if(this.textContent.value.match(this.regexValidator)){
+      for(let i=0; i<numberValue[0]; i++) {
+        console.log(i)
+          
+        }
       if (numberValue[0] === '1') {
         this.Bsegment[0].classList.add('red');
         this.Csegment[0].classList.add('red');
@@ -140,9 +150,9 @@ export class SevenSegmentDisplay {
       error[0].classList.remove('none-active-error');
       console.log(error)
     }
-    setTimeout(() => {
-      location.reload();
-    }, 1000)
+    // setTimeout(() => {
+    //   location.reload();
+    // }, 1000)
   }
 }
 
